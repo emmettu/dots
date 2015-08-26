@@ -27,7 +27,11 @@ Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 Plugin 'thinca/vim-quickrun'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +63,12 @@ let g:airline#extensions#tabline#enabled = 1
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
+"rainbow parens
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -151,7 +161,7 @@ syntax enable
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
