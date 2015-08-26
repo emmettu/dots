@@ -31,7 +31,9 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,7 +70,10 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-
+"tagbar
+nmap <F8> :TagbarToggle<CR>
+"easymotion
+"map <Leader> <Plug>(easymotion-prefix)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -76,7 +81,7 @@ au Syntax * RainbowParenthesesLoadBraces
 "Set esc to jk
 :imap jk <Esc>
 "Auto reload vmrc
-autocmd! bufwritepost .vimrc source %
+"autocmd! bufwritepost .vimrc source %
 "Easy paste
 set pastetoggle=<F2>
 set clipboard=unnamed
@@ -152,6 +157,8 @@ set novisualbell
 set t_vb=
 set tm=500
 
+"line numbers
+set number
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -169,6 +176,10 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+"change background passed 80 chars
+let &colorcolumn=join(range(81,999),",")
+"highlight ColorColumn ctermbg=234 guibg=#2c2e27
+highlight ColorColumn guibg=#2d2d2d ctermbg=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
