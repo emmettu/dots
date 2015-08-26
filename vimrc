@@ -23,9 +23,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Raimondi/delimitMate'
 Plugin 'ervandew/supertab'
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 Plugin 'thinca/vim-quickrun'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -61,10 +62,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.git     " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "vim-airline
 let g:airline#extensions#tabline#enabled = 1
-"neosnippets
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
 "rainbow parens
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -74,6 +71,7 @@ au Syntax * RainbowParenthesesLoadBraces
 nmap <F8> :TagbarToggle<CR>
 "easymotion
 "map <Leader> <Plug>(easymotion-prefix)
+"vim-snippets
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
