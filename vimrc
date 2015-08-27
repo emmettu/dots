@@ -35,6 +35,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'godlygeek/tabular'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,6 +158,7 @@ set tm=500
 
 "line numbers
 set number
+set relativenumber
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -165,7 +167,7 @@ set number
 syntax enable
 
 syntax enable
-set background=dark
+set background=light
 colorscheme jellybeans
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -175,9 +177,8 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 "change background passed 80 chars
-let &colorcolumn=join(range(81,999),",")
-"highlight ColorColumn ctermbg=234 guibg=#2c2e27
-highlight ColorColumn guibg=#2d2d2d ctermbg=0
+let &colorcolumn=join(range(80,999),",")
+highlight ColorColumn ctermbg=234 guibg=#2c2e27
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -256,7 +257,7 @@ map <leader>tm :tabmove
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+"map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
@@ -339,8 +340,8 @@ vnoremap <silent> gv :call VisualSelection('gv')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+"map <leader>cc :botright cope<cr>
+"map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
