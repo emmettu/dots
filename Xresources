@@ -1,1 +1,94 @@
-/home/emmett/.Xresources
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+ 
+Xft.dpi:                    96
+Xft.antialias:              false
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+ 
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+ 
+!URxvt.depth:                32
+URxvt.geometry:             90x30
+!URxvt*transparent:          true
+!Urxvt*.shading:             20
+!URxvt.fading:               10
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+!URxvt.loginShell:           true
+!URxvt.saveLines:            50
+!URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+ 
+! Fonts
+!URxvt.allow_bold:           true
+!URxvt.font:		    -*-anorexia-*-*-*-*-12-*-*-*-*-*-*-*
+!URxvt.font:		    -*-drift-medium-*-*-*-11-*-*-*-*-*-*-*
+!URxvt.boldFont:		    -*-drift-medium-*-*-*-11-*-*-*-*-*-*-*
+!URxvt*font: xft:Monospace:pixelsize=14
+!URxvt*boldFont: xft:Monospace:pixelsize=14
+!Urxvt*font: xft:DejaVu Sans Mono for Powerline
+!Urxvt*boldFont: xft:Sauce Code Powerline Light
+!Urxvt*font: xft:Ubuntu Mono derivative Powerline
+!URxvt*font: xft:Monospace:pixelsize=14
+!URxvt*font: xft:Meslo LG M Regular for Powerline
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=8
+URxvt.boldFont: xft:DejaVu Sans Mono for Powerline:size=8
+ 
+! Fix font space
+URxvt.letterSpace: -1
+ 
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+ 
+! Perl extensions
+!URxvt.perl-ext-common:      default,matcher
+!URxvt.matcher.button:       1
+!URxvt.urlLauncher:          firefox
+ 
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+ 
+! Pointer
+URxvt.pointerBlank:         true
+ 
+!!Source http://github.com/altercation/solarized
+ 
+!URXVT COLORS
+!Jellybeans Terminal Colours
+ urxvt.background: #101010
+ urxvt.foreground: #ffffff
+ ! black
+ urxvt.color0: #888888
+ urxvt.color8: #525252
+ ! red
+ urxvt.color1: #cf6a4c
+ urxvt.color9: #ff9d80
+ ! green
+ urxvt.color2: #99ad6a
+ urxvt.color10: #c3e6ad
+ ! yellow
+ urxvt.color3: #fad07a
+ urxvt.color11: #ffefbf
+ ! blue
+ urxvt.color4: #8197bf
+ urxvt.color12: #accaff
+ ! magenta
+ urxvt.color5: #8787af
+ urxvt.color13: #c4c4ff
+ ! cyan
+ urxvt.color6: #8fbfdc
+ urxvt.color14: #80bfaf
+ ! white
+ urxvt.color7: #888888
+ urxvt.color15: #e8e8d3
