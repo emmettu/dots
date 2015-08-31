@@ -69,16 +69,16 @@ let g:airline_theme = 'wombat'
 set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 1
 "tmux-line
 let g:tmuxline_preset = {
       \'a'    : '#S',
       \'b'    : 'System entropy: #(cat /proc/sys/kernel/random/entropy_avail)',
-      \'c'    : '#(~/.tmux/weather.sh)', 
+      \'c'    : '#(~/.tmux/weather.sh)',
       \'win'  : '#W',
       \'cwin'  : '#W',
       \'x'    : '#(rainbarf --bright --nobattery --width 20)',
-      \'y'    : '%a %h %d %Y', 
+      \'y'    : '%a %h %d %Y',
       \'z'    : '#(whoami)@#H'}
 "let g:tmuxline_separators = {
     "\ 'left' : '',
@@ -153,7 +153,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -266,7 +266,6 @@ map <C-l> <C-W>l
 " Switch to alternate file
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
- 
 
 " Close the current buffer
 map <leader>bd :bdelete<cr>
@@ -287,7 +286,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 "map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -341,6 +340,8 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
